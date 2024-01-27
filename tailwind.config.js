@@ -12,6 +12,13 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+     
+      zIndex: {
+        '10': 10,
+        '20': 20,
+        '30': 30,
+        // Add more custom z-index values as needed
+      },
     },
   },
   plugins: [],
