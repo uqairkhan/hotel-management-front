@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <CheckIsAuth/>
         <div 
-        className="mr-3 mt-24 ml-3 sm:ml-0 md:ml-72 lg:ml-72 xl:ml-72"
+        // className="mr-3 mt-24 ml-3 sm:ml-0 md:ml-72 lg:ml-72 xl:ml-72"
         >
         {children}
         </div>

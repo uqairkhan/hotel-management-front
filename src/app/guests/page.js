@@ -6,6 +6,7 @@ import Input from '../../components/input';
 import Loader from '../../components/loader';
 import { findAllBookings } from '../../services/api';
 import moment from 'moment';
+import isAuth from '@/HOC/isAuth';
 
 const Guests = () => {
     const [bookingsList, setBookingsList] = useState([])
@@ -104,4 +105,4 @@ const Guests = () => {
     )
 }
 
-export default Guests;
+export default isAuth(Guests);

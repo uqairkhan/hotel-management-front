@@ -5,6 +5,7 @@ import DropDown from "../../components/dropdown";
 import Input from '../../components/input';
 import Loader from '../../components/loader';
 import { allStaff } from '../../services/api';
+import isAuth from '@/HOC/isAuth';
 
 const Staff = () => {
 
@@ -100,4 +101,4 @@ const Staff = () => {
     )
 }
 
-export default Staff;
+export default isAuth(Staff);

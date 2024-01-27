@@ -4,6 +4,7 @@ import CustomTable from '../../components/customTable';
 import DropDown from "../../components/dropdown";
 import { findAllRooms } from '../../services/api';
 import Loader from '../../components/loader';
+import isAuth from '@/HOC/isAuth';
 
 const Rooms = () => {
     const [roomsList, setRoomsList] = useState([])
@@ -84,4 +85,4 @@ const Rooms = () => {
     )
 }
 
-export default Rooms;
+export default isAuth(Rooms);

@@ -6,6 +6,7 @@ import DropDown from "../../components/dropdown";
 import Loader from '../../components/loader';
 import { findAllBookings } from '../../services/api';
 import moment from 'moment';
+import isAuth from '@/HOC/isAuth';
 
 const eventColor=(status)=>{
     switch (status) {
@@ -119,4 +120,4 @@ const Bookings = () => {
     )
 }
 
-export default Bookings;
+export default isAuth(Bookings);

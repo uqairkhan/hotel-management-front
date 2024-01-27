@@ -4,6 +4,7 @@ import CustomCalendar from '../../components/customCalendar';
 import AddBookingModal from '../../components/modals/addBooking'
 import Loader from '../../components/loader';
 import { findAllRooms,findAllBookings,updateBooking } from '../../services/api';
+import isAuth from '@/HOC/isAuth';
 
 const Calendar = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -88,7 +89,7 @@ const handleBookingUpdate=async(event)=>{
   );
 };
 
-export default Calendar;
+export default isAuth(Calendar);
 
 
 

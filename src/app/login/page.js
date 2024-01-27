@@ -6,20 +6,26 @@ import Loader from '../../components/loader';
 import { setAxiosAuthorizationHeader } from "../../services/axiosConfig";
 import { useRouter } from 'next/navigation'
 import tokenStorage from "../../services/tokenStorage";
+import { redirect } from "next/navigation";
 
 const gradientStyle = {
     background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
 };
-export default function Login() {
+function Login() {
 const router = useRouter();
+const auth =tokenStorage.getToken()
+
+
+    useEffect(() => {
+      if (auth) {
+        return redirect("/dashboard");
+      }
+    }, []);
+
 
     const [formData, setFormData] = useState({ email: "", password: "" });
     const [loading,setLoading]=useState(false)
-    useEffect(()=>{
-        console.log("sdfasdfsdfsdfsfsfdsdf",tokenStorage.getToken())
-     if(tokenStorage.getToken())
-     router.push(`dashboard`);
-    },[])
+    
     const handleInputChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
     }
@@ -123,3 +129,4 @@ const router = useRouter();
         </>
     );
 }
+export default Login

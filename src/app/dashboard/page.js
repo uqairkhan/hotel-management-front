@@ -6,7 +6,7 @@ import CustomTable from '../../components/customTable';
 import { findAllBookings, roomAvailableCount } from '../../services/api';
 import Loader from '../../components/loader';
 import moment from 'moment';
-
+import isAuth from '@/HOC/isAuth';
 
 const eventColor = (status) => {
     switch (status) {
@@ -213,4 +213,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+export default isAuth(Dashboard);
