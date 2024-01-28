@@ -87,12 +87,12 @@ const Bookings = () => {
                         options={["All bookings", "Standard Room", "Deluxe Room", "Suite", "Family Room"]}
                     />
                     <button onClick={handleOpenModal} className='bg-blue-600 p-2 text-white rounded-md text-xs'>
-                        <dev className="flex">
+                        <div className="flex">
                             <svg className="w-4 h-4 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7 7V5" />
+                                <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h14m-7 7V5" />
                             </svg>
                             <span>Create New booking</span>
-                        </dev>
+                        </div>
                     </button>
                 </div>
             </div>

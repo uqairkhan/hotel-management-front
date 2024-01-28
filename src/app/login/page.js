@@ -11,6 +11,7 @@ import { toast } from 'react-toastify'
 const gradientStyle = {
     background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
 };
+
 export default function Login() {
 const router = useRouter();
     const [isCheckedToken,setIsCheckedToken]=useState(false)

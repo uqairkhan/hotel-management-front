@@ -28,8 +28,8 @@ const InputDropdown = ({label="",marginBottom="mb-1",options=[],onChange,placeHo
         className={`block w-full ${padding} text-sm text-gray-900 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-300`}
       />
       <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-      <svg class="w-6 h-6 text-blue-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 9-7 7-7-7"/>
+      <svg className="w-6 h-6 text-blue-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 9-7 7-7-7"/>
   </svg>
 
       </div>
