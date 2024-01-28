@@ -55,27 +55,27 @@ const HouseKeeping = () => {
                     data={[
                         {
                             room: "101", chores: "xxxxx", staff: "(00971)515885", startDate: "02/29/2024", endDate: "02/29/2024", time: "02:00pm",
-                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"in progress"}</span>
+                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"inprogress"}</span>
                         },
                         {
                             room: "101", chores: "xxxxx", staff: "(00971)515885", startDate: "02/29/2024", endDate: "02/29/2024", time: "02:00pm",
-                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"in progress"}</span>
+                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"inprogress"}</span>
                         },
                         {
                             room: "101", chores: "xxxxx", staff: "(00971)515885", startDate: "02/29/2024", endDate: "02/29/2024", time: "02:00pm",
-                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"in progress"}</span>
+                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"inprogress"}</span>
                         },
                         {
                             room: "101", chores: "xxxxx", staff: "(00971)515885", startDate: "02/29/2024", endDate: "02/29/2024", time: "02:00pm",
-                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"in progress"}</span>
+                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"inprogress"}</span>
                         },
                         {
                             room: "101", chores: "xxxxx", staff: "(00971)515885", startDate: "02/29/2024", endDate: "02/29/2024", time: "02:00pm",
-                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"in progress"}</span>
+                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"inprogress"}</span>
                         },
                         {
                             room: "101", chores: "xxxxx", staff: "(00971)515885", startDate: "02/29/2024", endDate: "02/29/2024", time: "02:00pm",
-                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"in progress"}</span>
+                            status: <span className={`border rounded-xl p-1 bg-yellow-500 text-white text-xs`}>{"inprogress"}</span>
                         },
                     ]}
                 />
