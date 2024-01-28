@@ -5,8 +5,8 @@ import SideBar from '../components/sidebar';
 import { usePathname } from 'next/navigation'
 import { useRouter } from 'next/navigation'
 import { setAxiosAuthorizationHeader } from "../services/axiosConfig";
-
-export default function CheckIsAuth() {
+import Login from '@/app/login/page';
+export default function CheckIsAuth({children}) {
     const router = useRouter();
     const pathname = usePathname()
     const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -17,17 +17,23 @@ export default function CheckIsAuth() {
             setIsAuthenticated(true)
         }
         else {
-            router.push(`login`);
             setIsAuthenticated(false)
+            router.push("login")
         }
        
 
     }, [pathname])
    
-   
-    return (
+   if(!isAuthenticated){
+    return <Login/>
+   }
+   else return (
         <>
-            {isAuthenticated && <SideBar />}
+         <SideBar/>
+         <div>
+         {children}
+         </div>
+            
         </>
     );
 }
