@@ -23,8 +23,7 @@ export default function CheckIsAuth({children}) {
        
 
     }, [pathname])
-   
-   if(!isAuthenticated){
+   if(!isAuthenticated||pathname=="/login"){
     return <Login/>
    }
    else return (

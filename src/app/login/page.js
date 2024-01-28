@@ -13,16 +13,17 @@ const gradientStyle = {
 };
 export default function Login() {
 const router = useRouter();
-
+    const [isCheckedToken,setIsCheckedToken]=useState(false)
     const [formData, setFormData] = useState({ email: "", password: "" });
     const [loading,setLoading]=useState(false)
-    // useEffect(()=>{
-    //  if(tokenStorage.getToken())
-    //  router.push(`dashboard`);
-    // },[])
-    if(tokenStorage.getToken())
-    router.push(`dashboard`);
-    
+    useEffect(()=>{
+        setIsCheckedToken(true)
+     if(tokenStorage.getToken()){
+     router.push(`dashboard`);
+     }
+    },[])
+    if(!isCheckedToken)
+    return null
     const handleInputChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value })
     }

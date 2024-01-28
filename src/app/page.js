@@ -1,9 +1,9 @@
-import LoginScreen from './login/page';
-
+import Dashboard from "./dashboard/page";
 export default function Page() {
+
   return (
     <>
-    <LoginScreen/>
+    <Dashboard/>
     </>
   );
 }
