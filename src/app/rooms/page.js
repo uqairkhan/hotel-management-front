@@ -4,6 +4,7 @@ import CustomTable from '../../components/customTable';
 import DropDown from "../../components/dropdown";
 import { findAllRooms } from '../../services/api';
 import Loader from '../../components/loader';
+import { toast } from 'react-toastify'
 
 const Rooms = () => {
     const [roomsList, setRoomsList] = useState([])
@@ -28,6 +29,7 @@ const Rooms = () => {
             setData(newRes)
             setLoading(false)
         } catch (err) {
+            toast(err?.message, {type:"error"});
             setLoading(false)
         }
     }

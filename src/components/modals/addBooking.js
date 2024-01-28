@@ -4,6 +4,7 @@ import Input from '../../components/input';
 import DropDown from '../dropdown';
 import Datetime from "react-datetime"
 import { addNewBooking } from '../../services/api';
+import { toast } from 'react-toastify';
 import "react-datetime/css/react-datetime.css"
 const gradientStyle = {
   background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
@@ -20,6 +21,7 @@ const Modal = ({ isOpen, onClose, title = "", onFetch }) => {
       onClose()
       onFetch()
     } catch (err) {
+      toast(err?.message, {type:"error"});
       setLoading(false)
     }
   }

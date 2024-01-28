@@ -6,6 +6,7 @@ import Input from '../../components/input';
 import Loader from '../../components/loader';
 import { findAllBookings } from '../../services/api';
 import moment from 'moment';
+import { toast } from 'react-toastify'
 
 const Guests = () => {
     const [bookingsList, setBookingsList] = useState([])
@@ -35,6 +36,7 @@ const Guests = () => {
             setData(filterData)
             setLoading(false)
         } catch (err) {
+            toast(err?.message, {type:"error"});
             setLoading(false)
         }
     }

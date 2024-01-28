@@ -4,6 +4,7 @@ import CustomCalendar from '../../components/customCalendar';
 import AddBookingModal from '../../components/modals/addBooking'
 import Loader from '../../components/loader';
 import { findAllRooms,findAllBookings,updateBooking } from '../../services/api';
+import { toast } from 'react-toastify'
 
 const Calendar = () => {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -21,6 +22,7 @@ const Calendar = () => {
           setRoomsList(res?.data)
           setLoading(false)
       } catch (err) {
+        toast(err?.message, {type:"error"});
           setLoading(false)
       }
   }
@@ -36,6 +38,7 @@ const Calendar = () => {
         setBookingsList(filterData)
         setLoading(false)
     } catch (err) {
+      toast(err?.message, {type:"error"});
         setLoading(false)
     }
 }
@@ -46,7 +49,7 @@ const handleBookingUpdate=async(event)=>{
    await updateBooking(event._id,{startDate:event.startDate,endDate:event.endDate,roomNo:event.roomNo})
 
   }catch(err){
-
+    toast(err?.message, {type:"error"});
   }
 }
   const handleOpenModal = () => {

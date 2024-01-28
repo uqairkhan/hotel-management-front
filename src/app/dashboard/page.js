@@ -6,7 +6,7 @@ import CustomTable from '../../components/customTable';
 import { findAllBookings, roomAvailableCount } from '../../services/api';
 import Loader from '../../components/loader';
 import moment from 'moment';
-
+import { toast } from 'react-toastify'
 
 const eventColor = (status) => {
     switch (status) {
@@ -89,6 +89,7 @@ const Dashboard = () => {
             setBookingsList(filterData)
             setLoading(false)
         } catch (err) {
+            toast(err?.message, {type:"error"});
             setLoading(false)
         }
     }
@@ -144,6 +145,7 @@ const Dashboard = () => {
             setChartSeries(filterSeries)
             setLoading(false)
         } catch (err) {
+            toast(err?.message, {type:"error"});
             setLoading(false)
         }
     }

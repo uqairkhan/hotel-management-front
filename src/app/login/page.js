@@ -6,6 +6,7 @@ import Loader from '../../components/loader';
 import { setAxiosAuthorizationHeader } from "../../services/axiosConfig";
 import { useRouter } from 'next/navigation'
 import tokenStorage from "../../services/tokenStorage";
+import { toast } from 'react-toastify'
 
 const gradientStyle = {
     background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
@@ -36,6 +37,7 @@ const router = useRouter();
       router.push(`dashboard`);
         setLoading(false)
        }catch(err){
+        toast(err?.message, {type:"error"});
        setLoading(false)
        }
     }

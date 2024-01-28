@@ -5,6 +5,7 @@ import DropDown from "../../components/dropdown";
 import Input from '../../components/input';
 import Loader from '../../components/loader';
 import { allStaff } from '../../services/api';
+import { toast } from 'react-toastify'
 
 const Staff = () => {
 
@@ -23,6 +24,7 @@ const Staff = () => {
             setData(res.data)
             setLoading(false)
         } catch (err) {
+            toast(err?.message, {type:"error"});
             setLoading(false)
         }
     }
