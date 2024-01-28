@@ -1,6 +1,6 @@
 import resolve from "./resolve";
 import axios from 'axios'
-let apiBase =process.env.REACT_APP_API_BASEURL;
+let apiBase =process.env.API_KEY;
 
 //login
 export const userLogin = async (req) => {
